@@ -1,3 +1,4 @@
+markdown
 # 🎵 Rust Rhythms Pro - Egui Edition
 
 ![Rust](https://img.shields.io/badge/Built%20with-Rust-orange.svg)
@@ -29,22 +30,32 @@ sudo apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev \
     gstreamer1.0-plugins-base gstreamer1.0-plugins-good \
     gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly \
     gstreamer1.0-libav libglib2.0-dev
+```
 
+### Build & Run
+Clone the repository and run the optimized release build:
 
+```bash
 # Build the optimized binary
 cargo build --release
 
 # Run the application
 cargo run --release
+```
+*The executable will be located in `target/release/playbin`.*
 
-Key,Action
-Space,Play / Pause
-Right Arrow,Next Track
-Left Arrow,Previous Track
-Up Arrow,Increase Volume (+5%)
-Down Arrow,Decrease Volume (-5%)
+## ⌨️ Keyboard Shortcuts
 
+| Key | Action |
+| :--- | :--- |
+| `Space` | Play / Pause |
+| `Right Arrow` | Next Track |
+| `Left Arrow` | Previous Track |
+| `Up Arrow` | Increase Volume (+5%) |
+| `Down Arrow` | Decrease Volume (-5%) |
 
+## 👨‍💻 Credits
 
-
-
+**Developed by Shay Kadosh Software Engineering © Ashkelon.**
+*Code Partner: Jimmy Henderson.*
+```
