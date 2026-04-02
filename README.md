@@ -29,3 +29,22 @@ sudo apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev \
     gstreamer1.0-plugins-base gstreamer1.0-plugins-good \
     gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly \
     gstreamer1.0-libav libglib2.0-dev
+
+
+# Build the optimized binary
+cargo build --release
+
+# Run the application
+cargo run --release
+
+Key,Action
+Space,Play / Pause
+Right Arrow,Next Track
+Left Arrow,Previous Track
+Up Arrow,Increase Volume (+5%)
+Down Arrow,Decrease Volume (-5%)
+
+
+
+
+
