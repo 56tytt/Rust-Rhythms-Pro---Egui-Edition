@@ -1,0 +1,27 @@
+[package]
+name = "playbin"
+version = "0.1.0"
+edition = "2024"
+description = "A high-performance premium audio player built in Rust."
+license = "MIT" # או כל רישיון אחר שמתאים לך
+[dependencies]
+
+gstreamer = "0.22"
+eframe = "0.33.3" # Or whatever the latest stable version is
+lofty = "0.23.3"
+rfd = "0.17.2"
+image = { version = "0.24", default-features = false, features = ["png"] }
+
+
+[profile.release]
+#opt-level = 3
+#lto = true
+#strip = true
+#codegen-units = 1
+
+opt-level = "z"        # אופטימיזציה לגודל בינארי קטן במיוחד
+lto = "fat"            # אופטימיזציה מקסימלית בזמן הקישור
+codegen-units = 1      # קימפול איטי יותר, אבל תוצאה יעילה יותר
+strip = true           # מחיקת סמלי דיבאג (הקטנה דרסטית של המשקל)
+panic = "abort"        # חיסכון בזיכרון במקרה של קריסה
+
